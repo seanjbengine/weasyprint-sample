@@ -1,0 +1,118 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 15px;
+  font-family: "Calibri";
+  }
+
+    * {
+      box-sizing: border-box;
+      -moz-box-sizing: border-box;
+    }
+
+    div.page {
+      width: 21cm;
+      min-height: 29.7cm;
+      padding: 2cm;
+      margin: 1cm auto;
+      /* border: 1px black solid; */
+      border-radius: 5px;
+      background: white;
+      background-image: url("media/background.png");
+      background-size: 21cm 29.7cm;
+    }
+
+    /* div.page-content {
+      max-height: 24cm;
+      overflow: hidden;
+    } */
+
+    div.section {
+      padding-bottom: 25px;
+    }
+
+    #full-name {
+      font-size: 36px;
+      line-height: 10px;
+    }
+
+    #title {
+      font-size: 19px;
+      color: #89B0D5;
+    }
+
+    div.header-container {
+      position: relative;
+      width: 17cm;
+      height: 0.93cm;
+    }
+
+        img.header-image {
+          position: absolute;
+          width: 17cm;
+          height: 0.93cm;
+        }
+
+        span.header-text {
+          position: absolute;
+          bottom: 8px;
+          left: 45px;
+          font-family: "Calibri";
+          font-size: 23px;
+          color: #6C6C6C;
+        }
+
+    div.content-container {
+      margin: auto;
+      width: 580px;
+    }
+        span.subheader-text {
+          color: #89B0D5
+        }
+
+        p.content-paragraph {
+          font-size: 15px;
+          font-family: "Calibri";
+        }
+
+        table.content-table {
+          width: 580px;
+          padding-top: 10px;
+        }
+
+        ul.content-ul {
+          padding-left: 18px;
+        }
+
+    @media print {
+        div.page {
+            margin: 0px;
+        }
+    }
+
+    @page {
+        size: A4;
+        margin: 0cm;
+        @frame content_frame {
+            left: 50pt;
+            width: 21cm;
+            top: 50pt;
+            height: 24cm;
+            -pdf-frame-border: 1;    /* for debugging the layout */
+        }
+    }
+
+    /* @media print {
+        .page {
+            margin: 0;
+            border: initial;
+            border-radius: initial;
+            width: initial;
+            min-height: initial;
+            box-shadow: initial;
+            background: initial;
+            page-break-after: always;
+        }
+    } */
+    /*
+     */

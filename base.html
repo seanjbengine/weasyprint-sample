@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+
+  <head>
+    <meta charset="utf-8">
+    <title>Dynamically Generated CV</title>
+    <link rel="stylesheet" href="style.css"/>
+  </head>
+
+  <body style="-webkit-print-color-adjust:exact;">
+
+    <div class="resume">
+      <div class="page">
+        <div class="page-content">
+
+          <div class="section" id="topcard">
+            <h1 id="full-name">{{ full_name }}</h1>
+            <h2 id="title">{{ title }} | {{ employer }}</h2>
+          </div>
+
+          <div class="section" id="profile">
+            <div class="header-container">
+              <span class="header-text">PROFILE</span>
+              <img class="header-image" src="media/profile_header_image.png">
+            </div>
+            <div class="content-container">
+              <p class="content-paragraph">{{ description }}</p>
+            </div>
+          </div>
+
+          <div class="section" id="snapshot">
+            <div class="header-container">
+              <span class="header-text">EXECUTIVE CAREER SNAPSHOT</span>
+              <img class="header-image" src="media/snapshot_header_image.png">
+            </div>
+            <div class="content-container">
+            {% if experience %}
+              <table class="content-table">
+                {% for item in experience %}
+                <tr>
+                  <td>{{ item.title }}<br><span style="color: #6C6C6C">{{ item.employer }}</span></td>
+                  <td align="right">{{ item.start_end }}</td>
+                </tr>
+                {% endfor %}
+              </table>
+              {% else %}
+                <p>EXPERIENCE NOT LISTED</p>
+              {% endif %}
+            </div>
+          </div>
+
+          <div class="section" id="assets">
+            <div class="header-container">
+              <span class="header-text">KEY ASSETS</span>
+              <img class="header-image" src="media/assets_header_image.png">
+            </div>
+            <div class="content-container">
+              <span class="subheader-text">Qualifications</span>
+              <p class="content-paragraph">{{ assets.qualifications|safe }}</p>
+              {% if assets.achievements %}
+                <span class = "subheader-text">Achievements</span>
+                <ul class="content-ul">
+                  {% for item in assets.achievements %}
+                    <li>{{ item }}</li>
+                  {% endfor %}
+                  {% endif %}
+              </ul>
+            </div>
+          </div>
+
+          <div class="section" id="experience">
+            <div class="header-container">
+              <span class="header-text">PROFESSIONAL EXPERIENCE</span>
+              <img class="header-image" src="media/experience_header_image.png">
+            </div>
+            <div class="content-container">
+              {% if experience %}
+                <table class="content-table">
+                  {% for item in experience %}
+                  <tr>
+                    <td>{{ item.title }}<br><span style="color: #6C6C6C">{{ item.employer }}</span></td>
+                    <td align="right">{{ item.start_end }}</td>
+                  </tr>
+                    <tr>
+                    <td colspan="2">{{ item.description }}</td>
+                  </tr>
+                  {% endfor %}
+                </table>
+                {% else %}
+                  <p>EXPERIENCE NOT LISTED</p>
+                {% endif %}
+            </div>
+          </div>
+
+          <div class="section" id="development">
+            <div class="header-container">
+              <span class="header-text">EDUCATION AND PROFESSIONAL DEVELOPMENT</span>
+              <img class="header-image" src="media/education_header_image.png">
+            </div>
+          </div>
+
+          lol
+          <br>
+          lol
+          <br>
+          lol
+          <br>
+          lol
+          <br>
+          lol
+          <br>
+          lol
+          <br>
+          lol
+          <br>
+          lol
+          <br>
+          lol
+          <br>
+          lol
+          <br>
+          lol
+          <br>
+          lol
+          <br>
+          lol
+          <br>
+          lol
+          <br>
+
+
+        </div>
+      </div>
+      <!-- NEW PAGE -->
+    </div>
+
+  </body>
+</html>
